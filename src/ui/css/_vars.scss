@@ -1,0 +1,71 @@
+$base-font-size: 16px;
+
+$breakpoint-smallest-min: 400px;
+$breakpoint-smaller-min: 600px;
+$breakpoint-min: 768px;
+$breakpoint-bigger: 900px;
+// $breakpoint-bigger: 1024px;
+$breakpoint-biggest: 1280px;
+
+$color-text-on-tan: rgb(66, 43, 69);
+$color-dark-blue: rgb(27, 66, 95);
+$color-bright-blue: rgb(40, 122, 184);
+$color-light-blue: rgb(222, 236, 248);
+$color-orange: rgb(237, 135, 54);
+$color-orange-text: rgb(214, 93, 0);
+$color-green: rgb(103, 172, 103);
+
+$gutter: 20px;
+$gutter-x2: 40px;
+.g {
+    @include remify('padding-right', $gutter);
+    @include remify('padding-left', $gutter);
+    @media all and (min-width: $breakpoint-min) {
+        @include remify('padding-right', $gutter-x2);
+        @include remify('padding-left', $gutter-x2);
+    }
+}
+
+.pt10 {
+    @include remify('padding-top', 10px);
+}
+.pt20 {
+    @include remify('padding-top', 20px);
+}
+.pt30 {
+    @include remify('padding-top', 30px);
+}
+.pt40 {
+    @include remify('padding-top', 40px);
+}
+.pt50 {
+    @include remify('padding-top', 50px);
+}
+.pt60 {
+    @include remify('padding-top', 60px);
+}
+.pt80 {
+    @include remify('padding-top', 80px);
+}
+
+.pb10 {
+    @include remify('padding-bottom', 10px);
+}
+.pb20 {
+    @include remify('padding-bottom', 20px);
+}
+.pb30 {
+    @include remify('padding-bottom', 30px);
+}
+.pb40 {
+    @include remify('padding-bottom', 40px);
+}
+.pb50 {
+    @include remify('padding-bottom', 50px);
+}
+.pb60 {
+    @include remify('padding-bottom', 60px);
+}
+.pb80 {
+    @include remify('padding-bottom', 80px);
+}
