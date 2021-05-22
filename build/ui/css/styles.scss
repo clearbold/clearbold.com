@@ -107,9 +107,9 @@ p {
         }
         @media all and (min-width: $breakpoint-min) {
             @include remify('font-size', 32px);
-            padding-left: 2ch;
+            padding-left: 1ch;
             text-align: center;
-            text-indent: -5ch;
+            text-indent: -3ch;
         }
     }
 }
@@ -151,9 +151,6 @@ p {
         & > div:last-of-type {
             flex-basis: 60%;
         }
-        .image {
-            @include remify('padding-bottom', 20px);
-        }
         .text {
             display: flex;
             flex-direction: column;
@@ -167,6 +164,13 @@ p {
         & > div:last-of-type {
             flex-basis: 50%;
         }
+        .image {
+            @include remify('padding-bottom', 20px);
+        }
+        .text {
+            @include remify('padding-right', $gutter);
+            @include remify('padding-left', $gutter);
+        }
     }
 }
 
@@ -176,7 +180,7 @@ p {
     display: inline-block;
     font-family: semibold;
     @include remify('font-size', 18px);
-    @include remify('margin-top', 20px);
+    @include remify('margin-top', 24px);
     padding-top: 1em;
     padding-right: 3ch;
     padding-bottom: 1em;
