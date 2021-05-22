@@ -96,6 +96,7 @@ p {
         color: $color-dark-blue;
         @include remify('font-size', 16px);
         font-family: semibold;
+        letter-spacing: -.5px;
         line-height: 1.25em;
         @include remify('margin-top', 42px);
         @media all and (min-width: $breakpoint-smallest-min) {
@@ -106,9 +107,9 @@ p {
         }
         @media all and (min-width: $breakpoint-min) {
             @include remify('font-size', 32px);
-            padding-left: 4ch;
+            padding-left: 2ch;
             text-align: center;
-            text-indent: -4ch;
+            text-indent: -5ch;
         }
     }
 }
@@ -119,6 +120,11 @@ p {
         margin-right: auto;
         margin-left: auto;
         max-width: 60ch;
+        @media all and (min-width: $breakpoint-smaller-min) {
+            & > span {
+                display: block;
+            }
+        }
     }
 }
 
@@ -137,14 +143,16 @@ p {
         align-items: stretch;
         display: flex;
         flex-direction: row-reverse;
+        @include remify('padding-top', 50px);
+        @include remify('padding-bottom', 50px);
         & > div:first-of-type {
             flex-basis: 40%;
         }
         & > div:last-of-type {
             flex-basis: 60%;
         }
-        img {
-            // max-width: 100%;
+        .image {
+            @include remify('padding-bottom', 20px);
         }
         .text {
             display: flex;
@@ -176,5 +184,6 @@ p {
     text-decoration: none;
     &:hover {
         background-color: $color-orange;
+        transform: scale(1.1);
     }
 }
