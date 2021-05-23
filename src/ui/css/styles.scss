@@ -96,6 +96,7 @@ p {
         color: $color-dark-blue;
         @include remify('font-size', 16px);
         font-family: semibold;
+        letter-spacing: -.25px;
         line-height: 1.25em;
         @include remify('margin-top', 42px);
         @media all and (min-width: $breakpoint-smallest-min) {
