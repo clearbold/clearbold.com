@@ -185,21 +185,16 @@ p, li {
     }
 }
 
-.technology {
-    background-color: rgb(239, 230, 199);
-    color: $color-text-on-tan;
+.two-up {
     @extend .pt60;
     @extend .pb60;
-    img {
-        @include remify('max-width', 400px);
-    }
     .text {
         @extend .pt30;
     }
     @media all and (min-width: $breakpoint-bigger) {
         align-items: stretch;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         @include remify('padding-top', 50px);
         @include remify('padding-bottom', 50px);
         & > div:first-of-type {
@@ -221,6 +216,94 @@ p, li {
         & > div:last-of-type {
             flex-basis: 50%;
         }
+        // .image {
+            // @include remify('padding-bottom', 20px);
+        // }
+    }
+
+    h2 {
+        font-family: semibold;
+        @include remify('font-size', 18px);
+        @include remify('margin-bottom', 16px);
+        text-align: center;
+        .subtext {
+            display: block;
+        }
+        @media all and (min-width: $breakpoint-smaller-min) {
+            @include remify('font-size', 20px);
+        }
+        @media all and (min-width: $breakpoint-min) {
+            @include remify('font-size', 24px);
+            .subtext {
+                @include remify('font-size', 20px);
+            }
+        }
+        @media all and (min-width: $breakpoint-bigger) {
+            text-align: left;
+        }
+    }
+    p:not(:last-of-type) {
+        @include remify('margin-bottom', 16px);
+    }
+
+    .placeholder-img {
+        background-color: pink;
+        min-height: 250px;
+        width: 100%;
+    }
+}
+
+.mark {
+    .placeholder-img {
+        margin-right: auto;
+        margin-left: auto;
+        min-height: 400px;
+        width: 70%;
+    }
+}
+
+.contact {
+    @media all and (min-width: $breakpoint-bigger) {
+        flex-direction: row-reverse;
+    }
+}
+
+.technology {
+    background-color: rgb(239, 230, 199);
+    color: $color-text-on-tan;
+    // @extend .pt60;
+    // @extend .pb60;
+    img {
+        @include remify('max-width', 400px);
+    }
+    // .text {
+    //     @extend .pt30;
+    // }
+    @media all and (min-width: $breakpoint-bigger) {
+        // align-items: stretch;
+        // display: flex;
+        flex-direction: row-reverse;
+        // @include remify('padding-top', 50px);
+        // @include remify('padding-bottom', 50px);
+        // & > div:first-of-type {
+        //     flex-basis: 40%;
+        // }
+        // & > div:last-of-type {
+        //     flex-basis: 60%;
+        // }
+        // .text {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     padding-top: 0;
+        //     @include remify('padding-right', $gutter-x2);
+        // }
+    }
+    @media all and (min-width: $breakpoint-biggest) {
+        // & > div:first-of-type,
+        // & > div:last-of-type {
+        //     flex-basis: 50%;
+        // }
         .image {
             @include remify('padding-bottom', 20px);
         }
@@ -228,6 +311,27 @@ p, li {
 }
 
 .platforms-clients {
+    // h2 {
+    //     font-family: semibold;
+    //     @include remify('font-size', 18px);
+    //     @include remify('margin-bottom', 40px);
+    //     text-align: center;
+    //     @media all and (min-width: $breakpoint-smaller-min) {
+    //         @include remify('font-size', 20px);
+    //     }
+    //     @media all and (min-width: $breakpoint-min) {
+    //         @include remify('font-size', 24px);
+    //     }
+    // }
+    // @media all and (min-width: $breakpoint-min) {
+    //     h2 {
+    //         display: none;
+    //     }
+    // }
+    @media all and (min-width: $breakpoint-bigger) {
+        @include remify('padding-top', 60px);
+        @include remify('padding-bottom', 60px);
+    }
     .platforms, .clients {
         & > div {
             &:not(:last-of-type) {
@@ -284,7 +388,7 @@ p, li {
         text-align: center;
         h3 {
             font-family: semibold;
-            font-size: 18px;
+            @include remify('font-size', 18px);
             @include remify('margin-bottom', 16px);
             &::after {
                 content: ':';
