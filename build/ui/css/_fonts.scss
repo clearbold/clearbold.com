@@ -15,6 +15,14 @@
 }
 
 @font-face {
+    font-family: 'semibolditalic';
+    src: url('../fonts/PublicSans-SemiBoldItalic.woff2') format('woff2'),
+         url('../fonts/PublicSans-SemiBoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'bold';
     src: url('../fonts/PublicSans-Bold.woff2') format('woff2'),
          url('../fonts/PublicSans-Bold.woff') format('woff');

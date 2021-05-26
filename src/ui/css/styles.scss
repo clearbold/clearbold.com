@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-p {
+p, li {
     line-height: 1.5em;
     @media all and (min-width: $breakpoint-min) {
         @include remify('font-size', 18px);
@@ -84,41 +84,44 @@ p {
         @media all and (min-width: $breakpoint-min) {
             @include remify('padding-top', 80px);
         }
-    }
-    h1, h2 {
-        font-family: semibold;
-    }
-    h1 {
-        color: $color-orange-text;
-        @include remify('font-size', 24px);
-        @media all and (min-width: $breakpoint-smaller-min) {
-            @include remify('font-size', 32px);
+        h1, h2 {
+            font-family: semibold;
         }
-        line-height: 1.3125em;
-    }
-    h2 {
-        font-size: 18px;
-        @media all and (min-width: $breakpoint-smaller-min) {
+        h1 {
+            color: $color-orange-text;
             @include remify('font-size', 24px);
+            @media all and (min-width: $breakpoint-smaller-min) {
+                @include remify('font-size', 32px);
+            }
+            line-height: 1.3125em;
         }
-    }
-    h2, p {
-        @include remify('margin-top', 18px);
-    }
-    .footnotes {
-        @include remify('padding-top', 64px);
-        list-style: decimal;
-        @include remify('padding-left', $gutter);
-    }
-    .has-button {
-        p:last-of-type {
-            border-top: 2px solid $color-orange;
-            @include remify('margin-top', 36px);
-            @include remify('padding-top', 36px);
-            text-align: center;
+        h2 {
+            font-size: 18px;
+            @media all and (min-width: $breakpoint-smaller-min) {
+                @include remify('font-size', 24px);
+            }
         }
-        .cta-wrapper .cta {
-            @include remify('margin-top', 32px);
+        h2, p {
+            @include remify('margin-top', 18px);
+        }
+        .footnotes {
+            @include remify('padding-top', 64px);
+            list-style: decimal;
+            @include remify('padding-left', $gutter);
+            li {
+                @include remify('font-size', 16px);
+            }
+        }
+        .has-button {
+            p:last-of-type {
+                border-top: 2px solid $color-orange;
+                @include remify('margin-top', 36px);
+                @include remify('padding-top', 36px);
+                text-align: center;
+            }
+            .cta-wrapper .cta {
+                @include remify('margin-top', 32px);
+            }
         }
     }
 }
@@ -136,7 +139,7 @@ p {
     }
     h1 {
         color: $color-dark-blue;
-        @include remify('font-size', 18px);
+        @include remify('font-size', 16px);
         font-family: semibold;
         letter-spacing: -.25px;
         line-height: 1.25em;
@@ -225,8 +228,79 @@ p {
 }
 
 .platforms-clients {
-    .wordpress-drupal {
+    .platforms, .clients {
+        & > div {
+            &:not(:last-of-type) {
+                @include remify('margin-bottom', 24px);
+            }
+        }
+        @media all and (min-width: $breakpoint-min) {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: row;
+            & > div {
+                flex-basis: 50%;
+            }
+        }
+        @media all and (min-width: $breakpoint-bigger) {
+            @include remify('padding-left', 80px);
+            @include remify('padding-right', 80px);
+        }
+    }
+    .platforms {
         text-align: center;
+        svg {
+            display: block;
+            height: auto;
+            margin-right: auto;
+            @include remify('margin-bottom', 16px);
+            margin-left: auto;
+            @include remify('max-width', 150px);
+            width: 100%;
+        }
+    }
+    .wordpress-drupal {
+        background-color: $color-light-blue;
+        color: $color-dark-blue;
+        background-color: $color-tan;
+        color: $color-orange-text;
+        display: block;
+        font-family: semibold;
+        @include remify('margin-top', 40px);
+        @include remify('margin-bottom', 40px);
+        @include remify('padding-top', 36px);
+        text-align: center;
+        text-decoration: none;
+        p {
+            margin-right: auto;
+            margin-left: auto;
+            @include remify('max-width', 400px);
+            &::after {
+                content: ' \00bb';
+            }
+        }
+    }
+    .clients {
+        text-align: center;
+        h3 {
+            font-family: semibold;
+            font-size: 18px;
+            @include remify('margin-bottom', 16px);
+            &::after {
+                content: ':';
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                &:not(:last-of-type) {
+                    &::after {
+                        content: ', ';
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -253,13 +327,44 @@ footer {
         border-top: 2px solid $color-dark-blue;
         text-align: center;
         a {
-            color: $color-dark-blue;
+            // color: $color-dark-blue;
             text-decoration: none;
         }
         @media all and (min-width: $breakpoint-min) {
             text-align: left;
             .brand {
                 margin-left: 0;
+            }
+        }
+        & > div:nth-of-type(2) {
+            @include remify('margin-top', 18px);
+            & > p:not(:last-of-type) {
+                @include remify('margin-bottom', 18px);
+            }
+            .wintergreen {
+                a {
+                    color: $color-green;
+                }
+            }
+        }
+        @media all and (min-width: $breakpoint-min) {
+            align-items: flex-end;
+            display: flex;
+            flex-direction: row;
+            & > div:nth-of-type(1) {
+                flex-basis: 60%;
+            }
+            & > div:nth-of-type(2) {
+                flex-basis: 40%;
+                @include remify('padding-bottom', 3px);
+                text-align: right;
+                p {
+                    @include remify('font-size', 14px);
+                    @include remify('line-height', 18px);
+                }
+                & > p:not(:last-of-type) {
+                    @include remify('margin-bottom', 9px);
+                }
             }
         }
     }
