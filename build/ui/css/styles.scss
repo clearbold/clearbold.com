@@ -81,6 +81,9 @@ p {
         margin-right: auto;
         margin-left: auto;
         @include remify('max-width', 900px);
+        @media all and (min-width: $breakpoint-min) {
+            @include remify('padding-top', 80px);
+        }
     }
     h1, h2 {
         font-family: semibold;

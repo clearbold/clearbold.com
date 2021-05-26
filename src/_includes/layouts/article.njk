@@ -2,7 +2,7 @@
 
 {% block page %}
             <main id="main">
-                <div class="content g pt80 pb80{{ ' has-button' if (buttonText|length) }}">
+                <div class="content g pt40 pb80{{ ' has-button' if (buttonText|length) }}">
                     <h1>{{ h1|safe if h1|length > 0 else title }}</h1>
                     {{ content|safe }}
 {% if buttonText|length %}
