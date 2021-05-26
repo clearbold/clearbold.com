@@ -10,21 +10,23 @@ Drupal is a go-to solution when an enterprise, open source Content Management Sy
 
 ## What&rsquo;s a Headless CMS?
 
-The <a href="https://jamstack.org" target="_blank">Jamstack</a> is gaining steam as a modern approach to building, serving, and maintaining performant, secure, and reliable websites. The &ldquo;JAM&rdquo; in Jamstack stands for JavaScript, APIs, and Markup, with the goal of breaking the website that runs in a browser free from a database or filesystem-powered CMS running on a single server. Jamstack sites can still use content management tools, but instead of merging content & templates when the page is requested, they undergo a build process when content is updated, generating a static website consisting of HTML, CSS, JavaScript, and media files, distributed across a Content Delivery Network (CDN). The generated site is fast, secure, and immune to server downtime issues. Some sites may leverage Application Programming Interfaces (APIs) to fetch dynamic content or provide additional functionality.
+The <a href="https://jamstack.org" target="_blank">Jamstack</a> is gaining steam as a modern approach to building, serving, and maintaining performant, secure, and reliable websites. The &ldquo;JAM&rdquo; in Jamstack stands for JavaScript, APIs, and Markup, with a goal of breaking the website that runs in a browser free from a database or filesystem-powered CMS running on a single server. Jamstack sites can still use content management tools, but instead of merging content & templates when the page is requested, they undergo a build process when content is updated, generating a static website consisting of HTML, CSS, JavaScript, and media files, distributed across a Content Delivery Network (CDN). The generated site is fast, secure, and immune to server downtime issues. Some sites may leverage Application Programming Interfaces (APIs) to fetch dynamic content or provide additional functionality.
 
-In the headless CMS model, the generated website pulls content from a traditional CMS&mdash;WordPress, Drupal, Craft&mdash;during an automated build (and the CMS can be configured to trigger the build process whenever content is updated). The resulting static site is independent of the CMS and its rendering system, thus the CMS is &ldquo;headless.&rdquo; Headless CMS sites continue to rely on a robust authoring experience while not relying on the CMS to render pages in real time.
+In the headless&mdash;or decoupled&mdash;CMS model, the generated website pulls content from a traditional CMS&mdash;WordPress, Drupal, Craft&mdash;during an automated build (and the CMS can be configured to trigger the build process whenever content is updated). The resulting static site is independent of the CMS and its rendering system, thus the CMS is &ldquo;headless.&rdquo; Headless CMS sites continue to rely on a robust authoring experience while not relying on the CMS to render pages in real time.
 
-## More Secure
+Why go this route?
 
-Staying up to date with CMS updates and security patches will always be a concern, but a CMS decoupled from your public website domain is no longer a vulnerability. A static, generated site is only deployed to the CDN after a successful build, and there&rsquo;s no control panel running at its URL.
+## Better Security
 
-We&rsquo;ve long been more comfortable with Craft&rsquo;s track record for security than WordPress or Drupal&rsquo;s, both of which are, admittedly, targeted victims of their own success. But by isolating the CMS from the live site in a headless CMS, we can eliminate the website&rsquo;s URL as an attack vector on any CMS platform.
+Staying up to date with CMS updates and security patches will always be a concern, but a CMS decoupled from your public website domain is a significantly reduced vulnerability. A static, generated site is only deployed to the CDN after a successful build, and there&rsquo;s no control panel running at its URL.
+
+We&rsquo;ve long been more comfortable with Craft&rsquo;s track record for security than WordPress or Drupal&rsquo;s, both of which are, admittedly, targeted victims of their own success. But by isolating a headless CMS from the live site, we can eliminate the website&rsquo;s URL as an attack vector on any CMS platform.
 
 ## Increased Uptime &amp; Reliability
 
 Ever drop a press release only to watch your site falter under a surge of unexpected traffic? We don&rsquo;t like getting those calls, either.
 
-Here we&rsquo;re not configuring complex caching schemes or upgrading servers to keep up with traffic spikes or aid performance. The Jamstack takes care of that for us. The static, generated site will perform as well for 10 users as 1,000,000, with no intervention required.
+Here we&rsquo;re not configuring complex caching schemes or upgrading servers to keep up with traffic spikes or aid performance. The Jamstack takes care of that for us. A static, generated site will perform as well for 10 users as 1,000,000, with no intervention required.
 
 And with a static, generated site deployed to the edges of a global content delivery network, headless CMS builds deliver better uptime and faster performance, critical factors for Search Engine Optimization (SEO) and the User Experience (UX).
 
@@ -36,7 +38,7 @@ Page and module layouts belong in code-based template files&mdash;not bound to, 
 
 ## A More Sustainable Web
 
-It&rsquo;s our hope that static, generated sites will reduce the computing power required to serve sites dependent on databases and application code for every page request, thereby reducing the energy consumed by so many data centers. Shifting from fossil fuels to renewable energy isn&rsquo;t enough. We should aspire to be mindful of unnecessary or wasteful energy usage in every form.
+It&rsquo;s our hope that static, generated websites will reduce the computing power otherwise required to serve sites dependent on databases and application code for every page request, thereby reducing the energy consumed by so many data centers. Shifting from fossil fuels to renewable energy isn&rsquo;t enough. We should aspire to be mindful of unnecessary or wasteful energy usage in every form.
 
 ## Ready to Go Headless?
 

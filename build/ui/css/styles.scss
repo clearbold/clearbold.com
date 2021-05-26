@@ -103,7 +103,7 @@ p {
         @include remify('margin-top', 18px);
     }
     .footnotes {
-        @extend .pt80;
+        @include remify('padding-top', 64px);
         list-style: decimal;
         @include remify('padding-left', $gutter);
     }
@@ -113,6 +113,9 @@ p {
             @include remify('margin-top', 36px);
             @include remify('padding-top', 36px);
             text-align: center;
+        }
+        .cta-wrapper .cta {
+            @include remify('margin-top', 32px);
         }
     }
 }
