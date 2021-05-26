@@ -197,11 +197,15 @@ p, li {
         flex-direction: row;
         // @include remify('padding-top', 50px);
         // @include remify('padding-bottom', 50px);
-        & > div:first-of-type {
-            flex-basis: 40%;
-        }
+        // & > div:first-of-type {
+        //     flex-basis: 40%;
+        // }
+        // & > div:last-of-type {
+        //     flex-basis: 60%;
+        // }
+        & > div:first-of-type,
         & > div:last-of-type {
-            flex-basis: 60%;
+            flex-basis: 50%;
         }
         .text {
             display: flex;
@@ -212,10 +216,10 @@ p, li {
         }
     }
     @media all and (min-width: $breakpoint-biggest) {
-        & > div:first-of-type,
-        & > div:last-of-type {
-            flex-basis: 50%;
-        }
+        // & > div:first-of-type,
+        // & > div:last-of-type {
+        //     flex-basis: 50%;
+        // }
         // .image {
             // @include remify('padding-bottom', 20px);
         // }
@@ -271,8 +275,8 @@ p, li {
 .technology {
     background-color: rgb(239, 230, 199);
     color: $color-text-on-tan;
-    // @extend .pt60;
-    // @extend .pb60;
+    @extend .pt60;
+    @extend .pb60;
     img {
         @include remify('max-width', 400px);
     }
@@ -283,14 +287,14 @@ p, li {
         // align-items: stretch;
         // display: flex;
         flex-direction: row-reverse;
-        // @include remify('padding-top', 50px);
-        // @include remify('padding-bottom', 50px);
-        // & > div:first-of-type {
-        //     flex-basis: 40%;
-        // }
-        // & > div:last-of-type {
-        //     flex-basis: 60%;
-        // }
+        @include remify('padding-top', 50px);
+        @include remify('padding-bottom', 50px);
+        & > div:first-of-type {
+            flex-basis: 40%;
+        }
+        & > div:last-of-type {
+            flex-basis: 60%;
+        }
         // .text {
         //     display: flex;
         //     flex-direction: column;
@@ -300,10 +304,10 @@ p, li {
         // }
     }
     @media all and (min-width: $breakpoint-biggest) {
-        // & > div:first-of-type,
-        // & > div:last-of-type {
-        //     flex-basis: 50%;
-        // }
+        & > div:first-of-type,
+        & > div:last-of-type {
+            flex-basis: 50%;
+        }
         .image {
             @include remify('padding-bottom', 20px);
         }
