@@ -247,7 +247,7 @@ header, footer {
 }
 footer {
     .has-brand {
-        @include remify('padding-top', 48px);
+        @include remify('padding-top', 44px);
     }
     & > div {
         border-top: 2px solid $color-dark-blue;
