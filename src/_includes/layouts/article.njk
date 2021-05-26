@@ -1,0 +1,18 @@
+{% extends './layout.njk' %}
+
+{% block page %}
+            <main id="main">
+                <div class="content g pt80 pb80{{ ' has-button' if (buttonText|length) }}">
+                    <h1>{{ h1|safe if h1|length > 0 else title }}</h1>
+                    {{ content|safe }}
+{% if buttonText|length %}
+                    <div class="cta-wrapper"><a href="mailto:hello@clearbold.com&subject=Let's work together" class="cta">Let&rsquo;s Go!</a></div>
+{% endif %}
+                    <ul class="footnotes">
+{% for footnote in footnotes %}
+                        <li id="footnote{{ loop.index }}"><a href="{{ footnote }}" target="_blank">{{ footnote }}</a></li>
+{% endfor %}
+                    </ul>
+                </div>
+            </main>
+{% endblock page %}

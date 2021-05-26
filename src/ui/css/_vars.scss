@@ -9,20 +9,27 @@ $breakpoint-biggest: 1280px;
 
 $color-text-on-tan: rgb(66, 43, 69);
 $color-dark-blue: rgb(27, 66, 95);
+$color-dark-blue-50: rgba(27, 66, 95, .5);
 $color-bright-blue: rgb(40, 122, 184);
 $color-light-blue: rgb(222, 236, 248);
 $color-orange: rgb(237, 135, 54);
 $color-orange-text: rgb(214, 93, 0);
 $color-green: rgb(103, 172, 103);
+$color-tan: rgb(239, 230, 199);
 
 $gutter: 20px;
 $gutter-x2: 40px;
+$gutter-x3: 60px;
 .g {
     @include remify('padding-right', $gutter);
     @include remify('padding-left', $gutter);
     @media all and (min-width: $breakpoint-min) {
         @include remify('padding-right', $gutter-x2);
         @include remify('padding-left', $gutter-x2);
+    }
+    @media all and (min-width: $breakpoint-biggest) {
+        @include remify('padding-right', $gutter-x3);
+        @include remify('padding-left', $gutter-x3);
     }
 }
 

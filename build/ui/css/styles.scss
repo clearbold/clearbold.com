@@ -36,7 +36,7 @@ body {
 a {
     color: $color-bright-blue;
     text-decoration-thickness: from-font;
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
     transition: .2s all;
 }
 
@@ -52,21 +52,16 @@ img {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    @include remify('font-size', 18px);
-    @media all and (min-width: $breakpoint-smaller-min) {
-        @include remify('font-size', 24px);
-    }
-    @media all and (min-width: $breakpoint-min) {
-        @include remify('font-size', 32px);
-    }
+sup {
+    font-size: 70%;
+    line-height: .75em;
+    margin-left: 2px;
 }
 
-h2 {
-    font-family: bold;
-    @include remify('margin-bottom', 16px);
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
+
 p {
     line-height: 1.5em;
     @media all and (min-width: $breakpoint-min) {
@@ -79,6 +74,47 @@ p {
     margin-right: auto;
     margin-left: auto;
     @include remify('max-width', 1280px);
+}
+
+.article {
+    .content {
+        margin-right: auto;
+        margin-left: auto;
+        @include remify('max-width', 900px);
+    }
+    h1, h2 {
+        font-family: semibold;
+    }
+    h1 {
+        color: $color-orange-text;
+        @include remify('font-size', 24px);
+        @media all and (min-width: $breakpoint-smaller-min) {
+            @include remify('font-size', 32px);
+        }
+        line-height: 1.3125em;
+    }
+    h2 {
+        font-size: 18px;
+        @media all and (min-width: $breakpoint-smaller-min) {
+            @include remify('font-size', 24px);
+        }
+    }
+    h2, p {
+        @include remify('margin-top', 18px);
+    }
+    .footnotes {
+        @extend .pt80;
+        list-style: decimal;
+        @include remify('padding-left', $gutter);
+    }
+    .has-button {
+        p:last-of-type {
+            border-top: 2px solid $color-orange;
+            @include remify('margin-top', 36px);
+            @include remify('padding-top', 36px);
+            text-align: center;
+        }
+    }
 }
 
 .brand {
@@ -94,7 +130,7 @@ p {
     }
     h1 {
         color: $color-dark-blue;
-        @include remify('font-size', 16px);
+        @include remify('font-size', 18px);
         font-family: semibold;
         letter-spacing: -.25px;
         line-height: 1.25em;
@@ -117,6 +153,17 @@ p {
 
 .mountains {
     text-align: center;
+    h2 {
+        font-family: bold;
+        @include remify('font-size', 18px);
+        @include remify('margin-bottom', 16px);
+        @media all and (min-width: $breakpoint-smaller-min) {
+            @include remify('font-size', 24px);
+        }
+        @media all and (min-width: $breakpoint-min) {
+            @include remify('font-size', 32px);
+        }
+    }
     p {
         margin-right: auto;
         margin-left: auto;
@@ -168,13 +215,55 @@ p {
         .image {
             @include remify('padding-bottom', 20px);
         }
-        .text {
-            @include remify('padding-right', $gutter);
-            @include remify('padding-left', $gutter);
+    }
+}
+
+.platforms-clients {
+    .wordpress-drupal {
+        text-align: center;
+    }
+}
+
+header, footer {
+    .brand {
+        margin-right: auto;
+        margin-left: auto;
+        @include remify('max-width', 200px);
+        transition: .2s all;
+    }
+    @media all and (min-width: $breakpoint-min) {
+        .brand {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+footer {
+    .has-brand {
+        @include remify('padding-top', 48px);
+    }
+    & > div {
+        border-top: 2px solid $color-dark-blue;
+        text-align: center;
+        a {
+            color: $color-dark-blue;
+            text-decoration: none;
+        }
+        @media all and (min-width: $breakpoint-min) {
+            text-align: left;
+            .brand {
+                margin-left: 0;
+            }
         }
     }
 }
 
+.cta-wrapper {
+    .article & {
+        text-align: center;
+    }
+}
 .cta {
     background-color: $color-orange-text;
     color: white;
