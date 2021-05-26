@@ -186,8 +186,8 @@ p, li {
 }
 
 .two-up {
-    @extend .pt60;
-    @extend .pb60;
+    // @extend .pt60;
+    // @extend .pb60;
     .text {
         @extend .pt30;
     }
@@ -195,8 +195,8 @@ p, li {
         align-items: stretch;
         display: flex;
         flex-direction: row;
-        @include remify('padding-top', 50px);
-        @include remify('padding-bottom', 50px);
+        // @include remify('padding-top', 50px);
+        // @include remify('padding-bottom', 50px);
         & > div:first-of-type {
             flex-basis: 40%;
         }
