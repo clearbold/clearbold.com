@@ -58,6 +58,11 @@ sup {
     margin-left: 2px;
 }
 
+b {
+    font-family: semibold;
+    font-weight: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
@@ -357,6 +362,9 @@ p, li {
     }
     .platforms {
         text-align: center;
+        & > div {
+            @include remify('margin-bottom', 24px);
+        }
         svg {
             display: block;
             height: auto;
@@ -367,12 +375,64 @@ p, li {
             width: 100%;
         }
     }
+    .clients {
+        & > div {
+            &:not(:last-of-type) {
+                @include remify('margin-bottom', 24px);
+            }
+        }
+    }
+    .wordpress-timber,
+    .wordpress-drupal {
+        display: block;
+    }
+    .wordpress-timber {
+        span {
+            display: block;
+            text-align: center;
+            &:nth-of-type(2) {
+                color: #32373c;
+                font-family: semibold;
+                @include remify('font-size', 24px);
+                line-height: 1em;
+            }
+        }
+        @media all and (min-width: $breakpoint-smallest-min) {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            @include remify('padding-top', 20px);
+            span {
+                display: inline-block;
+                &:nth-of-type(2) {
+                    @include remify('margin-right', 10px);
+                    @include remify('margin-left', 10px);
+                }
+                &.timber {
+                    position: relative;
+                    top: -4px;
+                }
+            }
+        }
+        svg {
+            height: auto;
+            @include remify('max-width', 190px);
+            width: 100%;
+        }
+        .timber {
+            svg {
+                @include remify('max-width', 132px);
+                path {
+                    fill: #32373c;
+                }
+            }
+        }
+    }
     .wordpress-drupal {
         background-color: $color-light-blue;
         color: $color-dark-blue;
         background-color: $color-tan;
         color: $color-orange-text;
-        display: block;
         font-family: semibold;
         @include remify('margin-top', 40px);
         @include remify('margin-bottom', 40px);
