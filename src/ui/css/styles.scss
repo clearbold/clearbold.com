@@ -212,6 +212,11 @@ p, li {
         & > div:last-of-type {
             flex-basis: 50%;
         }
+        .image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         .text {
             display: flex;
             flex-direction: column;
