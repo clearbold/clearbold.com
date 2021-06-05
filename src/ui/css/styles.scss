@@ -398,7 +398,7 @@ p, li {
             &:nth-of-type(2) {
                 color: #32373c;
                 font-family: semibold;
-                @include remify('font-size', 24px);
+                @include remify('font-size', 23px);
                 line-height: 1em;
             }
         }
