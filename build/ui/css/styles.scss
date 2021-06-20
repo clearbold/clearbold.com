@@ -173,6 +173,21 @@ p, li {
         margin-left: auto;
         @include remify('max-width', 1000px);
     }
+    @media all and (max-width: $breakpoint-min) {
+        overflow: hidden;
+        img {
+            margin-right: -10%;
+            margin-left: -10%;
+            width: 120%;
+        }
+    }
+    @media all and (max-width: $breakpoint-smaller-min) {
+        img {
+            margin-right: -15%;
+            margin-left: -15%;
+            width: 130%;
+        }
+    }
     h2 {
         font-family: bold;
         @include remify('font-size', 18px);
